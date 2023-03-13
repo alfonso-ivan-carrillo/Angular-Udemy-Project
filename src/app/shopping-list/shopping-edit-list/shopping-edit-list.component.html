@@ -21,3 +21,32 @@
         </form>
     </div>
 </div>
+<div>
+    {{ hello }}
+    <div>
+        <button [hidden]="!buttonState">Button</button>
+    </div>
+    <div>
+        <p [innerText]="hello"></p>
+    </div>
+    <div>
+        <button (click)="onClick()">click</button>
+    </div>  
+    <br>
+    <div>
+        <label>Song Name</label>
+        <input type="text" class="form-control"
+            (input)="onSong($event)">
+        <div>
+            <p>{{ song }}</p>
+        </div>
+    </div>
+    <div>
+        <label>Comic Book</label>
+        <input type="text" class="form-control"
+           [(ngModel)]="comic" >
+            <p>{{ comic }}</p>
+    </div>
+
+
+</div>
